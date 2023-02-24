@@ -1,0 +1,19 @@
+    create table if not exists ods_didi.t_user_order(
+        orderId string comment '订单id',
+        telephone string comment '打车用户手机',
+        lng string comment '用户发起打车的经度',
+        lat string comment '用户发起打车的纬度',
+        province string comment '所在省份',
+        city string comment '所在城市',
+        es_money double comment '预估打车费用',
+        gender string comment '用户信息 - 性别',
+        profession string comment '用户信息 - 行业',
+        age_range string comment '年龄段（70后、80后、...）',
+        tip double comment '小费',
+        subscribe integer comment '是否预约（0 - 非预约、1 - 预约）',
+        sub_time string comment '预约时间',
+        is_agent integer comment '是否代叫（0 - 本人、1 - 代叫）',
+        agent_telephone string comment '预约人手机',
+        order_time string comment '预约时间'
+    )
+    ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' ; 
